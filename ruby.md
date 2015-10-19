@@ -44,3 +44,37 @@ arr = [2, 5, 6, 556, 6, 6, 8, 9, 0, 123, 556]
 arr.uniq #=> [2, 5, 6, 556, 8, 9, 0, 123]
 #
 ```
+
+### Enumerable
+
+```Ruby
+%w[ant bear cat].all? { |word| word.length >= 3 } #=> true
+%w[ant bear cat].all? { |word| word.length >= 4 } #=> false
+[nil, true, 99].all? #=> false
+
+%w[ant bear cat].any? { |word| word.length >= 3 } #=> true
+%w[ant bear cat].any? { |word| word.length >= 4 } #=> true
+[nil, true, 99].any?                              #=> true
+
+a = [1, 2, 3, 4, 5, 0]
+a.drop(3)             #=> [4, 5, 0]
+```
+
+### Hash
+```Ruby
+#A Hash can be easily created by using its implicit form:
+grades = { "Jane Doe" => 10, "Jim Doe" => 6 }
+
+#Hashes allow an alternate syntax form when your keys are always symbols. Instead of
+#options = { :font_size => 10, :font_family => "Arial" }
+
+#You could write it as:
+options = { font_size: 10, font_family: "Arial" }
+
+#Each named key is a symbol you can access in hash:
+options[:font_size]  # => 10
+
+A# Hash can also be created through its ::new method:
+grades = Hash.new
+grades["Dorothy Doe"] = 9
+```
