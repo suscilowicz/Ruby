@@ -74,7 +74,7 @@ options = { font_size: 10, font_family: "Arial" }
 #Each named key is a symbol you can access in hash:
 options[:font_size]  # => 10
 
-A# Hash can also be created through its ::new method:
-grades = Hash.new
+# Hash can also be created through its ::new method:
+grades = {}
 grades["Dorothy Doe"] = 9
 ```
