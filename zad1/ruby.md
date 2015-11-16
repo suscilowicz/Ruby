@@ -2,8 +2,6 @@
 
 ### Array
 
-[Array.rb](https://github.com/suscilowicz/Ruby/blob/master/zad1/array.rb)
-
 ##### Tworzenie
 - Pusta tablica
 ```ruby
@@ -76,24 +74,32 @@ array.uniq! # usuniecie elementow, ktore sie powtarzaja
 #=>[4, 'szesc', 0, 1, 2, 3, 5, 7]
 ```
 ### Enumerable
-[enumerable.rb](https://github.com/suscilowicz/Ruby/blob/master/zad1/enumerable.rb)
 ```Ruby
 array = %w(Audi Mercedes Porshe Fiat Seat Opel Bugatti Skoda)
 ```
-Sprawdzanie warunkow
+##### Sprawdzanie warunkow
 ```Ruby
 puts array.all? { |a| a.length >= 5 } # sprawdza czy wszystkie elementy spelniaja warunek
+#=> false
 puts array.any? { |a| a.length >= 3 } # sprawdza czy jakikolwiek element spelnia warunek
+#=> true
 puts array.none? { |a| a.length >= 3 } # sprawdza czy kazdy element nie spelnia warunku
+#=> false
 puts array.one? { |a| a.length >= 3 } # sprawdza czy dokladnie jeden element spelnia warunek
+#=> false
 puts array.detect { |a| a == 'Seat' } # przeszukiwanie az do spelnienia warunku
+#=> Seat
 puts array.find_all { |a| a[0] == 'S' } # wyswietla elementy spelniajace warunek
+#=> ['Seat', 'Skoda']
 ```
-Wartosci minimalne, maksymalne oraz sortowanie
+##### Wartosci minimalne, maksymalne oraz sortowanie
 ```ruby
 puts array.min
-puts array.max # najmniejszy i najwiekszy element
+#=> Audi
+puts array.max
+#=> Skoda
 puts array.sort # sortowanie
+#=> ['Audi', 'Bugatti', 'Fiat', 'Mercedes', 'Opel', 'Porshe', 'Seat', 'Skoda']
 ```
 
 ### Hash
