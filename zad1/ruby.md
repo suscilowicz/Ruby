@@ -60,20 +60,20 @@ array.unshift(0)
 array.insert(2, 2)
 #=>[0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
 array.insert(0, 1, 4, 4, 'szesc', nil)
-#=>[0, 1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
+#=>[1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
 
 array.pop
-#=>[0, 1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
-array.shift
 #=>[1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
+array.shift
+#=>[4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
 array.delete_at(1)
-#=>[1, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
+#=>[4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
 array.delete('ostatni')
-#=>[1, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7]
+#=>[4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7]
 array.compact! # usuniecie pustych elementow z tablicy
-#=>[1, 4, 'szesc', 0, 1, 2, 2, 3, 4, 5, 'szesc', 7]
+#=>[4, 'szesc', 0, 1, 2, 2, 3, 4, 5, 'szesc', 7]
 array.uniq! # usuniecie elementow, ktore sie powtarzaja
-#=>[1, 4, 'szesc', 0, 2, 3, 5, 7]
+#=>[4, 'szesc', 0, 1, 2, 3, 5, 7]
 ```
 ### Enumerable
 [enumerable.rb](https://github.com/suscilowicz/Ruby/blob/master/zad1/enumerable.rb)
