@@ -33,30 +33,47 @@ n = 3 # definiujemy zmienna n i przypisujemy 3
 puts array.take(n) #=> [1,2,3]
 puts array.drop(n) #=> [4,5,'szesc',7]
 ```
-Uzyskanie informacji o tablicy
+##### Uzyskanie informacji o tablicy
+- Ilosc elementow
 ```ruby
-puts array.length # wyswietla ilosc elementow
-puts array.size # jak wyzej
-puts array.count #  jak wyzej
-
-puts array.empty? # sprawdza czy tablica jest pusta
-puts array.include?(8 - 1) # sprawdza czy tablica posiada podany element (true)
-puts array.include?('piec') # sprawdza czy tablica posiada podany element (false)
+puts array.length #=> 7
+puts array.size #=> 7
+puts array.count #=> 7
 ```
-Dodawanie i usuwanie elementow
+- Sprawdzenie, czy tablica jest pusta
 ```ruby
-array.push('ostatni') # dodanie elemntu na koniec tablicy
-array << ('jednak ten jest ostatni') # tak jak wyzej
-array.unshift(0) # dodanie elementu na poczatek tablicy
-array.insert(2, 2) # dodanie elementu na pozycji 2
-array.insert(0, 1, 4, 4, 'szesc', nil) # mozna dodac takze pare elementow
+puts array.empty? #=> false
+```
+- Sprawdzenie, czy tablica posiada podany element
+```ruby
+puts array.include?(8 - 1) #=> true
+puts array.include?('piec') #=> false
+```
+##### Dodawanie i usuwanie elementow
+```ruby
+array.push('ostatni')
+#=> #=>[1, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
+array << ('last')
+#=>[1, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
+array.unshift(0)
+#=>[0, 1, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
+array.insert(2, 2)
+#=>[0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
+array.insert(0, 1, 4, 4, 'szesc', nil)
+#=>[0, 1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni', 'last']
 
-array.pop # usuniecie ostatniego elementu
-array.shift # usuniecie pierwszego elementu
-array.delete_at(1) # usuniecie elementu o indexie 1
-array.delete('ostatni') # usuniecie elementu o nazwie zawartej w nawiasie
+array.pop
+#=>[0, 1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
+array.shift
+#=>[1, 4, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
+array.delete_at(1)
+#=>[1, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7, 'ostatni']
+array.delete('ostatni')
+#=>[1, 4, 'szesc', nil, 0, 1, 2, 2, 3, 4, 5, 'szesc', 7]
 array.compact! # usuniecie pustych elementow z tablicy
+#=>[1, 4, 'szesc', 0, 1, 2, 2, 3, 4, 5, 'szesc', 7]
 array.uniq! # usuniecie elementow, ktore sie powtarzaja
+#=>[1, 4, 'szesc', 0, 2, 3, 5, 7]
 ```
 ### Enumerable
 [enumerable.rb](https://github.com/suscilowicz/Ruby/blob/master/zad1/enumerable.rb)
