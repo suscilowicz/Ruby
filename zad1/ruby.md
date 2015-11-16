@@ -1,21 +1,37 @@
 ## Zaczynamy przygodę z Ruby
 
 ### Array
+
 [Array.rb](https://github.com/suscilowicz/Ruby/blob/master/zad1/array.rb)
-Tworzenie oraz wyswietlanie
+
+* Tworzenie
+- Pusta tablica
 ```ruby
-array = [] #tworzenie pustej tablicy
-array = [1, 2, 3, 4, 5, 'szesc', 8 - 1] # tworzenie tablicy wypelnionej elementami
-puts array # wyswietla tablice
-puts array[2] # wyswietla trzeci element tablicy
-puts array.at(2) # to co wyzej, inny zapis
-puts array[-2] # wyswietla przedostatni element tablicy
-puts array.first # wyswietla pierwszy element tablicy
-puts array.last # wyswietla ostatni element tablicy
-puts array[0, 2] # wyswietla elementy z zakresu 0-2 bez ostatniego
+array = []
+```
+- Tablica wypelniona elementami
+```ruby
+array = [1, 2, 3, 4, 5, 'szesc', 8 - 1]
+```
+* Wyswietlanie
+- Cala zawartosc tablicy
+```ruby
+puts array #=>[1, 2, 3, 4, 5, 'szesc', 7]
+```
+- Wskazany element
+```ruby
+puts array[2] #=> 3
+puts array.at(2) #=> 3
+puts array[-2] #=> szesc
+puts array.first #=> 1
+puts array.last #=> 7
+```
+- Wskazane elementy
+```ruby
+puts array[0, 2] #=> [1, 2]
 n = 3 # definiujemy zmienna n i przypisujemy 3
-puts array.take(n) # wyswietla pierwsze n elementow
-puts array.drop(n) # wyswietla wszystko procz pierwszych n elementow
+puts array.take(n) #=> [1,2,3]
+puts array.drop(n) #=> [4,5,'szesc',7]
 ```
 Uzyskanie informacji o tablicy
 ```ruby
