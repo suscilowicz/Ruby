@@ -4,7 +4,7 @@
 
 [Array.rb](https://github.com/suscilowicz/Ruby/blob/master/zad1/array.rb)
 
-* Tworzenie
+##### Tworzenie
 - Pusta tablica
 ```ruby
 array = []
@@ -13,7 +13,7 @@ array = []
 ```ruby
 array = [1, 2, 3, 4, 5, 'szesc', 8 - 1]
 ```
-* Wyswietlanie
+##### Wyswietlanie
 - Cala zawartosc tablicy
 ```ruby
 puts array #=>[1, 2, 3, 4, 5, 'szesc', 7]
