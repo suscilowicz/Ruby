@@ -103,4 +103,57 @@ puts array.sort # sortowanie
 ```
 
 ### Hash
-Sie robi sie
+##### Tworzenie
+- Pusty hash
+```ruby
+hash = {}
+puts hash.empty? # sprawdzenie czy Pusty
+#=> false
+```
+- Hash wypelniony elementami i kluczami
+```ruby
+hash = { 1 =>'Audi', 2 =>'Bugatti', 3 =>'Fiat',
+  4 =>'Mercedes', 5 =>'Opel', 6 =>'Porshe', 7 =>'Seat', 8 =>'Skoda'}
+puts hash
+#=> {1=>"Audi", 2=>"Bugatti", 3=>"Fiat", 4=>"Mercedes",
+#=> 5=>"Opel", 6=>"Porshe", 7=>"Seat", 8=>"Skoda"}
+```
+##### Dodawanie i usuwanie elementow
+- Dodanie nowego elementu
+```ruby
+hash[9] = 'Rover'
+puts hash
+#=> {1=>"Audi", 2=>"Bugatti", 3=>"Fiat", 4=>"Mercedes", 5=>"Opel",
+#=> 6=>"Porshe", 7=>"Seat", 8=>"Skoda", 9=>"Rover"}
+# mozna takze uzyc:
+hash.store(9, 'Rover')
+```
+- Usuwanie
+```ruby
+hash.clear # usuwa wszystkie elementy i klucze
+#=> {}
+
+#usuwanie wedlug klucza
+hash.delete(1) #=> 'Audi'
+hash.delete(11) #=> nil
+hash.delete(11) { |el| "#{el} not found"} #=> '11 not found'
+```
+##### Rozne operacje na hash
+- Sprawdzanie czy klucz/element istnieje
+```ruby
+hash.has_key?(1) #=> true
+hash.has_key?(20) #=> false
+hash.has_value?('Audi') #=> true
+hash.has_value?('Taczka') #=> false
+```
+- Zamiana kluczy z elementami
+```ruby
+hash.invert #=> {"Audi"=>1, "Bugatti"=>2, "Fiat"=>3, "Mercedes"=>4,
+  #=> "Opel"=>5, "Porshe"=>6, "Seat"=>7, "Skoda"=>8, "Rover"=>9}
+```
+- Wielkosc hash
+```ruby
+hash.size #=> 9
+hash.length #=> 9
+hash.count #=> 9
+```
