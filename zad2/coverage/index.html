@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-25T22:10:56+01:00">2015-11-25T22:10:56+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-11-25T23:24:18+01:00">2015-11-25T23:24:18+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         32.3
+         38.3
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>40</b> relevant lines. 
-    <span class="green"><b>40</b> lines covered</span> and
+    <b>36</b> relevant lines. 
+    <span class="green"><b>36</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,13 +51,13 @@
     <tbody>
       
       <tr>
-        <td class="strong"><a href="#8875f3d087149eba8434b33ae543a6c35bdaa593" class="src_link" title="lib/szyfrowanie.rb">lib/szyfrowanie.rb</a></td>
+        <td class="strong"><a href="#f7ca31399734bfba0875e9b06bb0f9c19dea758c" class="src_link" title="lib/szyfrowanie.rb">lib/szyfrowanie.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>59</td>
-        <td>40</td>
-        <td>40</td>
+        <td>55</td>
+        <td>36</td>
+        <td>36</td>
         <td>0</td>
-        <td>32.3</td>
+        <td>38.3</td>
       </tr>
       
     </tbody>
@@ -76,13 +76,13 @@
     
       <div class="source_files">
       
-        <div class="source_table" id="8875f3d087149eba8434b33ae543a6c35bdaa593">
+        <div class="source_table" id="f7ca31399734bfba0875e9b06bb0f9c19dea758c">
   <div class="header">
     <h3>lib/szyfrowanie.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>40</b> relevant lines. 
-      <span class="green"><b>40</b> lines covered</span> and
+      <b>36</b> relevant lines. 
+      <span class="green"><b>36</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -96,26 +96,26 @@
           <code class="ruby">def rot13(tekst)</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="2">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="2">
+          <span class="hits">23</span>
           
           <code class="ruby">  zakodowane = %w()</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="3">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="3">
+          <span class="hits">23</span>
           
           <code class="ruby">  tekst.each_char do |char|</code>
         </li>
       
-        <li class="covered" data-hits="254" data-linenumber="4">
-          <span class="hits">254</span>
+        <li class="covered" data-hits="274" data-linenumber="4">
+          <span class="hits">274</span>
           
           <code class="ruby">    if (char &gt;= &#39;a&#39; &amp;&amp; char &lt;= &#39;m&#39;) || (char &gt;= &#39;A&#39; &amp;&amp; char &lt;= &#39;M&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="131" data-linenumber="5">
-          <span class="hits">131</span>
+        <li class="covered" data-hits="143" data-linenumber="5">
+          <span class="hits">143</span>
           
           <code class="ruby">      kodowanie = char.ord + 13</code>
         </li>
@@ -126,8 +126,8 @@
           <code class="ruby">    elsif (char &gt;= &#39;n&#39; &amp;&amp; char &lt;= &#39;z&#39;) || (char &gt;= &#39;N&#39; &amp;&amp; char &lt;= &#39;Z&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="109" data-linenumber="7">
-          <span class="hits">109</span>
+        <li class="covered" data-hits="116" data-linenumber="7">
+          <span class="hits">116</span>
           
           <code class="ruby">      kodowanie = char.ord - 13</code>
         </li>
@@ -138,8 +138,8 @@
           <code class="ruby">    elsif char == &#39; &#39;</code>
         </li>
       
-        <li class="covered" data-hits="14" data-linenumber="9">
-          <span class="hits">14</span>
+        <li class="covered" data-hits="15" data-linenumber="9">
+          <span class="hits">15</span>
           
           <code class="ruby">      kodowanie = &#39; &#39;</code>
         </li>
@@ -150,8 +150,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="254" data-linenumber="11">
-          <span class="hits">254</span>
+        <li class="covered" data-hits="274" data-linenumber="11">
+          <span class="hits">274</span>
           
           <code class="ruby">    zakodowane.push(kodowanie.chr)</code>
         </li>
@@ -162,8 +162,8 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="13">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="18" data-linenumber="13">
+          <span class="hits">18</span>
           
           <code class="ruby">  return zakodowane.join</code>
         </li>
@@ -186,20 +186,20 @@
           <code class="ruby">def binarny(tekst)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="17">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="17">
+          <span class="hits">12</span>
           
           <code class="ruby">  zakodowane = []</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="18">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="18">
+          <span class="hits">12</span>
           
           <code class="ruby">  tekst.each_char do |char|</code>
         </li>
       
-        <li class="covered" data-hits="113" data-linenumber="19">
-          <span class="hits">113</span>
+        <li class="covered" data-hits="115" data-linenumber="19">
+          <span class="hits">115</span>
           
           <code class="ruby">    if char == &#39; &#39;</code>
         </li>
@@ -216,8 +216,8 @@
           <code class="ruby">    elsif char != &#39; &#39;</code>
         </li>
       
-        <li class="covered" data-hits="107" data-linenumber="22">
-          <span class="hits">107</span>
+        <li class="covered" data-hits="109" data-linenumber="22">
+          <span class="hits">109</span>
           
           <code class="ruby">      zakodowane.push(char.ord.to_s(2))</code>
         </li>
@@ -234,8 +234,8 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="25">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="25">
+          <span class="hits">11</span>
           
           <code class="ruby">  return zakodowane.join</code>
         </li>
@@ -318,50 +318,50 @@
           <code class="ruby">def oBinarny(zakodowane)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="39">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="39">
+          <span class="hits">11</span>
           
           <code class="ruby">  a = zakodowane.length / 7</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="40">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="40">
+          <span class="hits">11</span>
           
           <code class="ruby">  odkodowane = []</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="41">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="41">
+          <span class="hits">11</span>
           
           <code class="ruby">  i=0</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="42">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="42">
+          <span class="hits">11</span>
           
           <code class="ruby">  j=0</code>
         </li>
       
-        <li class="covered" data-hits="43" data-linenumber="43">
-          <span class="hits">43</span>
+        <li class="covered" data-hits="49" data-linenumber="43">
+          <span class="hits">49</span>
           
           <code class="ruby">  while (i &lt; a)</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="44">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="27" data-linenumber="44">
+          <span class="hits">27</span>
           
           <code class="ruby">    odkodowane.push(zakodowane[j..j+6].to_i(2).chr)</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="45">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="27" data-linenumber="45">
+          <span class="hits">27</span>
           
           <code class="ruby">    i += 1</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="46">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="27" data-linenumber="46">
+          <span class="hits">27</span>
           
           <code class="ruby">    j += 7</code>
         </li>
@@ -372,8 +372,8 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="48">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="11" data-linenumber="48">
+          <span class="hits">11</span>
           
           <code class="ruby">  return odkodowane.join</code>
         </li>
@@ -418,30 +418,6 @@
           
           
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="56">
-          <span class="hits">1</span>
-          
-          <code class="ruby">a = &#39;testowanie aplikacji&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="57">
-          <span class="hits">1</span>
-          
-          <code class="ruby">puts rot13(a)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
-          
-          <code class="ruby">puts binarny(&#39;test&#39;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
-          
-          <code class="ruby">puts rotbin(&#39; &#39;)</code>
         </li>
       
     </ol>

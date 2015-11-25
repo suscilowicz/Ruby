@@ -13,6 +13,8 @@ RSpec.describe 'szyfrowanie.rb' do
     it 'returns the correct result' do
       expect(rot13('testowanie aplikacji')).to be_a_kind_of String
       expect(rot13('testowanie aplikacji')).to eq('grfgbjnavr ncyvxnpwv')
+      expect(rot13('testowanie aplikacji')).to start_with('g')
+      expect(rot13('testowanie aplikacji')).to end_with('v')
       expect(rot13('testowanie aplikacji').length).to eq('testowanie aplikacji'.length)
     end
   end
@@ -25,6 +27,8 @@ RSpec.describe 'szyfrowanie.rb' do
       expect(binarny('testowanie aplikacji')).to be_a_kind_of String
       expect(binarny('test')).to eq('1110100110010111100111110100')
       expect(binarny('')).to eq('')
+      expect(binarny('abc')).to_not eql('2')
+      expect(binarny('xyz')).to_not eql('9')
     end
   end
   describe '#rotbin' do
@@ -36,6 +40,7 @@ RSpec.describe 'szyfrowanie.rb' do
       expect(rotbin('testowanie aplikacji')).to be_a_kind_of String
       expect(rotbin('test')).to eq('1100111111001011001101100111')
       expect((rotbin('testowanie aplikacji').length)).to eq(('testowanie aplikacji'.length)*7)
+      expect(rotbin(' ')).to_not be_nil
     end
   end
   describe '#oRot13' do
@@ -58,6 +63,7 @@ RSpec.describe 'szyfrowanie.rb' do
     it 'returns the correct result' do
       expect(oBinarny('1110100110010111100111110100')).to be_a_kind_of String
       expect(oBinarny('1110100110010111100111110100')).to eq('test')
+      expect(oBinarny('1110100110010111100111110100')).to_not eql('testt')
       expect((oBinarny('1110100110010111100111110100')).length).to eq('test'.length)
     end
   end
