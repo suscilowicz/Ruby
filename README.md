@@ -16,5 +16,10 @@ Podręczne linki:
 ## Zadania
 
 1. [x] [Learn X in Y minutes, where X = Ruby Array/Enumerable/Hash](https://github.com/suscilowicz/Ruby/tree/master/zad1/ruby.md)
+<<<<<<< HEAD
 2. [x] [Coś do przetestowania na początek (szyfrowanie)](https://github.com/suscilowicz/Ruby/tree/master/zad2)
 3. [x] [Kalkulator fitness](https://github.com/suscilowicz/Ruby/tree/master/zad3)
+=======
+2. [x] [Szyfrowanie](https://github.com/suscilowicz/Ruby/tree/master/zad2)
+3. [ ] Program/Biblioteka/Aplikacja WWW
+>>>>>>> origin/master
