@@ -1,4 +1,4 @@
-## Kalkulator fitness
+## Kalkulator fitness.
 
 FitCalc to program, który poprzez Twój wiek, wzrost i wagę obliczy Twoje BMI oraz procentowe zapotrzebowanie makroskładników na podstawie zapotrzebowania kalorycznego.
 
